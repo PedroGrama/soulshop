@@ -25,6 +25,8 @@ class CupomController {
   
       res.redirect("/cupom");
     }
+
+    
     static async paginaEditCupom(req, res){//irar trazer e mostrar os produtos
       const { id } = req.params;
       const cupom = await Cupom.findById(id).lean();
@@ -35,7 +37,7 @@ class CupomController {
     static async editCupom(req, res){//ira modificar e alterar os produtos
       const { codCupom, dataValidade, descricao, quantidade,valor } = req.body;
   
-      await Cupom.findByIdAndUpdate(id, { name, price, description, quantity });
+      await Cupom.findByIdAndUpdate(id, { codCupom, dataValidade, descricao, quantidade,valor });
   
       res.redirect("/cupom");
     }
