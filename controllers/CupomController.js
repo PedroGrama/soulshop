@@ -35,16 +35,16 @@ class CupomController {
     }
   
     static async editCupom(req, res){//ira modificar e alterar os produtos
-      const { codCupom, dataValidade, descricao, quantidade,valor } = req.body;
+      const {id, codCupom, dataValidade, descricao, quantidade, valor } = req.body;
   
-      await Cupom.findByIdAndUpdate(id, { codCupom, dataValidade, descricao, quantidade,valor });
+      await Cupom.findByIdAndUpdate(id, { codCupom, dataValidade, descricao, quantidade, valor });
   
       res.redirect("/cupom");
     }
   
     static async deleteCupom(req, res){
       const { id } = req.body;
-      await Produto.findByIdAndDelete(id);
+      await Cupom.findByIdAndDelete(id);
       res.redirect("/cupom")
     }
 
