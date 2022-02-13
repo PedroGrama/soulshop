@@ -26,9 +26,9 @@ class LojasController {
   }
   static async paginaEditLojas(req, res){//irar trazer e mostrar os produtos
     const { id } = req.params;
-    const loja = await Lojas.findById(id).lean();
+    const lojas = await Lojas.findById(id).lean();
 
-    res.render("editar_lojas", { loja });
+    res.render("editar_lojas", { lojas });
   }
 
   static async editLojas(req, res){//ira modificar e alterar os produtos
