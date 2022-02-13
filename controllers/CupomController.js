@@ -1,6 +1,8 @@
 const Cupom = require("../models/Cupom");
 
 class CupomController {
+
+  
     static async paginaCupom(req, res) {
         let query = {};
         const { codigo } = req.query;
@@ -35,7 +37,7 @@ class CupomController {
     }
   
     static async editCupom(req, res){//ira modificar e alterar os produtos
-      const { codCupom, dataValidade, descricao, quantidade,valor } = req.body;
+      const { id, codCupom, dataValidade, descricao, quantidade,valor } = req.body;
   
       await Cupom.findByIdAndUpdate(id, { codCupom, dataValidade, descricao, quantidade,valor });
   
@@ -44,11 +46,9 @@ class CupomController {
   
     static async deleteCupom(req, res){
       const { id } = req.body;
-      await Produto.findByIdAndDelete(id);
+      await cupom.findByIdAndDelete(id);
       res.redirect("/cupom")
     }
-
-    
   }
 
   module.exports = CupomController
