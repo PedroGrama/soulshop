@@ -1,6 +1,7 @@
 const Produto = require("../models/Produto");
 
 class ProdutoController {
+
   static async paginaProdutos(req, res) {
     let query = {};
     const { nomeProduto } = req.query;
@@ -44,6 +45,8 @@ class ProdutoController {
     await Produto.findByIdAndDelete(id);
     res.redirect("/produtos")
   }
+
+  
 }
 
 module.exports = ProdutoController;
