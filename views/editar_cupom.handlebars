@@ -1,5 +1,9 @@
 <div class="m-1">
+<<<<<<< HEAD
   <h2>Editar produto</h2>
+=======
+  <h2>Editar Cupom</h2>
+>>>>>>> 95f893da9a42d7681fa1cca929332c8bebf11601
   <hr />
   <form action="/cupom/atualizar" method="POST">
   <input name="id" type="hidden" value="{{cupom._id}}">
@@ -8,18 +12,27 @@
       <input type="text" name="codCupom" id="codCupom" class="form-control" value="{{cupom.codCupom}}" required />
     </div>
     <div class="form-group">
+<<<<<<< HEAD
       <label for="price">Preço*</label>
+=======
+      <label for="dataValidade">Data de Validade</label>
+>>>>>>> 95f893da9a42d7681fa1cca929332c8bebf11601
       <input
         type="number"
         name="dataValidade"
         id="dataValidade"
         class="form-control"
+<<<<<<< HEAD
         value="{{codCupom.dataValidade}}"
+=======
+        value="{{cupom.dataValidade}}"
+>>>>>>> 95f893da9a42d7681fa1cca929332c8bebf11601
         step=".1"
         required
       />
     </div>
     <div class="form-group">
+<<<<<<< HEAD
       <label for="description">Descrição*</label>
       <textarea
         name="description"
@@ -37,6 +50,36 @@
         id="quantity"
         class="form-control"
         value="{{produto.quantity}}"
+=======
+      <label for="descricao">Descrição*</label>
+      <textarea
+        name="descricao"
+        id="descricao"
+        rows="10"
+        class="form-control"
+        required
+      >{{cupom.descricao}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="quantidade">Quantidade*</label>
+      <input
+        type="number"
+        name="quantidade"
+        id="quantidade"
+        class="form-control"
+        value="{{cupom.quantidade}}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input
+        type="number"
+        name="valor"
+        id="valor"
+        class="form-control"
+        value="{{cupom.valor}}"
+>>>>>>> 95f893da9a42d7681fa1cca929332c8bebf11601
         required
       />
     </div>

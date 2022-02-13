@@ -1,0 +1,35 @@
+<div class="m-1">
+  <h2>Editar Lojas</h2>
+  <hr />
+  <form action="/lojas/atualizar" method="POST">
+  <input name="id" type="hidden" value="{{lojas._id}}">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" class="form-control" value="{{lojas.nome}}" required />
+    </div>
+    <div class="form-group">
+      <label for="endereco">Endereço</label>
+      <input
+        type="text"
+        name="endereco"
+        id="endereco"
+        class="form-control"
+        value="{{lojas.endereco}}"
+        step=".1"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="categoria">Categoria</label>
+      <textarea
+        name="categoria"
+        id="categoria"
+        rows="10"
+        class="form-control"
+        required
+      >{{lojas.categoria}}</textarea>
+    </div>
+
+    <button class="btn btn-primary mt-2">Atualizar</button>
+  </form>
+</div>
