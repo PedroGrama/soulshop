@@ -1,0 +1,56 @@
+<di class="m-1">
+  <h2>Editar Vale Presente</h2>
+  <hr />
+  <form action="/valepresente/atualizar" method="POST">
+  <input name="id" type="hidden" value="{{valepresente._id}}">
+    <div class="form-group">
+      <label for="codigo">Codigo</label>
+      <input type="text" name="codigo" id="codigo" class="form-control" value="{{valepresente.codigo}}" required />
+    </div>
+    <div class="form-group">
+      <label for="validade">Data de Validade</label>
+      <input
+        type="number"
+        name="validade"
+        id="validade"
+        class="form-control"
+        value="{{valepresente.validade}}"
+        step=".1"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição*</label>
+      <textarea
+        name="descricao"
+        id="descricao"
+        rows="10"
+        class="form-control"
+        required
+      >{{valepresente.descricao}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="quantidade">Quantidade*</label>
+      <input
+        type="number"
+        name="quantidade"
+        id="quantidade"
+        class="form-control"
+        value="{{valepresente.quantidade}}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input
+        type="number"
+        name="valor"
+        id="valor"
+        class="form-control"
+        value="{{valepresente.valor}}"
+        required
+      />
+    </div>
+    <button class="btn btn-primary mt-2">Atualizar</button>
+  </form>
+</di>
