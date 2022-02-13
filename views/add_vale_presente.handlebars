@@ -1,0 +1,53 @@
+<div class="m-1">
+  <h2>Adicionar Vele Presente</h2>
+  <hr />
+  <form action="/valepresente/enviar" method="POST">
+    <div class="form-group">
+      <label for="codigo">Codigo</label>
+      <input type="text" name="codigo" id="codigo" class="form-control" required />
+    </div>
+
+     <div class="form-group">
+      <label for="validade">Validade*</label>
+      <input
+        type="number"
+        name="validade"
+        id="validade"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição*</label>
+      <textarea
+        name="descricao"
+        id="descricao"
+        rows="10"
+        class="form-control"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="quantidade">Quantidade*</label>
+      <input
+        type="number"
+        name="quantidade"
+        id="quantidade"
+        class="form-control"
+        required
+      />
+    </div>
+        <div class="form-group">
+      <label for="valor">Valor</label>
+      <input
+        type="number"
+        name="valor"
+        id="valor"
+        class="form-control"
+        step=".1"
+        required
+      />
+    </div>
+    <button class="btn btn-primary mt-2">Criar</button>
+  </form>
+</div>
